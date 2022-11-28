@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 14</title>
+</head>
+
+<body style="padding-left: 25px; padding-top: 15px;">
+    <p style="font-weight:bold; font-size:large;">
+        1º) Codificando as expressões - (Exercício 14)
+    </p>
+
+    <p>10 + 5 = <span id="res_1"></span> </p>
+
+    <p>“10” + 2 = <span id="res_2"></span> </p>
+
+    <p>“10” * 2 == <span id="res_3"></span> </p>
+
+    <p>“10” / 3 =<span id="res_4"></span> </p>
+
+    <p>“10” % 3 = <span id="res_5"></span> </p>
+
+    <p>10 + true = <span id="res_6"></span> </p>
+
+    <p>10 == ”10” = <span id="res_7"></span> </p>
+
+    <p>10 === “10” = <span id="res_8"></span> </p>
+
+    <p>10 < 11=<span id="res_9"></span> </p>
+
+    <p>10 > 12 = <span id="res_10"></span> </p>
+
+    <p>10 <= 10.1=<span id="res_11"></span> </p>
+
+    <p>10 > 9.99 = <span id="res_12"></span> </p>
+
+    <p>10 != “dez” = <span id="res_13"></span> </p>
+
+    <p>10 + true = <span id="res_14"></span> </p>
+
+    <p>“dez” + true =<span id="res_15"></span> </p>
+
+    <p>10 + false = <span id="res_16"></span> </p>
+
+    <p>10 * false = <span id="res_17"></span> </p>
+
+    <p>true + true = <span id="res_18"></span> </p>
+
+    <p>10++ = <span id="res_19"></span> </p>
+
+    <p>10-- = <span id="res_20"></span> </p>
+
+    <p>1 & 1 = <span id="res_21"></span> </p>
+
+    <p>1 & 0 = <span id="res_22"></span> </p>
+
+    <p>0 & 0 = <span id="res_23"></span> </p>
+
+    <p>0 / 1 = <span id="res_24"></span> </p>
+
+    <p>5 + 5 == 10 = <span id="res_25"></span> </p>
+
+    <p>“5” + ”5” == 10 = <span id="res_26"></span> </p>
+
+    <p>“5” * 2 > 9 = <span id="res_27"></span> </p>
+
+    <p>(10 + 10) * 2 = <span id="res_28"></span> </p>
+
+    <p>10 + 10 * 2 = <span id="res_29"></span> </p>
+
+    ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ●
+    </br></br>
+    <p style="font-weight:bold; font-size:large;">
+        2º) Responda as perguntas de acordo com as variáveis. - (Exercício 14)
+    </p>
+
+    <p>a) branco == “branco”<span id="pes_1"></span> </p>
+
+    <p>b) branco == cinza<span id="pes_2"></span> </p>
+
+    <p>c) carro === branco<span id="pes_3"></span> </p>
+
+    <p>d) var cavalo = carro == “preto” ? “cinza” : “marron”;<span id="pes_4"></span> </p>
+
+    <p>e) Quantas prestações são necessárias para pagar o valor do carro com uma entrada
+        de 3.000? Demonstre a operação.<span id="pes_5"></span> </p>
+
+    <p>f) Somando as variáveis de cores é formada uma string de quantos caracteres?<span id="pes_6"></span> </p>
+
+    ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ●
+    
+    <script>
+        var branco = 'preto';
+        var preto = 'cinza';
+        var cinza = 'branco';
+        var carro = 'preto';
+        var valor = 30000;
+        var prestacao = 750;
+
+        //01-resposta
+        var pes = 'pes_1';
+        if ( branco == 'branco' ){
+            result = true;
+            document.getElementById(pes).innerHTML = ' Resultado: ' + result;
+        } else {
+            result = false;
+            document.getElementById(pes).innerHTML = ' Resultado: ' + result;
+        }
+
+        //02-resposta
+        var pes = 'pes_2';
+        if ( branco == cinza ){
+            result = true;
+            document.getElementById(pes).innerHTML = ' Resultado: ' + result;
+        } else {
+            result = false;
+            document.getElementById(pes).innerHTML = ' Resultado: ' + result;
+        }
+
+        //03-resposta
+        var pes = 'pes_3';
+        if ( carro === branco ){
+            result = true;
+            document.getElementById(pes).innerHTML = ' Resultado: ' + result;
+        } else {
+            result = false;
+            document.getElementById(pes).innerHTML = ' Resultado: ' + result;
+        }
+
+        //04-resposta
+        var pes = 'pes_4';
+        if ( carro == 'preto' ){
+            result = 'cavalo = cinza';
+            document.getElementById(pes).innerHTML = ' Resultado: ' + result;
+        } else {
+            result = 'cavalo = marrom';
+            document.getElementById(pes).innerHTML = ' Resultado: ' + result;
+        }
+
+        //05-resposta
+        var pes = 'pes_5';
+        var resto = valor - 3000;
+        var parcela = resto / 750;
+        result = 'O valor de ' + valor + ' menos a entrada de 3.000 resta ' + resto
+         + ' que será dividido em ' + parcela + ' parcelas de ' + prestacao;
+        ;
+        document.getElementById(pes).innerHTML = '<br> Resultado: ' + result;
+
+        //06-resposta
+        var pes = 'pes_6';
+        result = branco + preto + cinza 
+        document.getElementById(pes).innerHTML = '<br> Resultado: ' + result.length + ' caracteres';
+       
+
+    </script>
+
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>
